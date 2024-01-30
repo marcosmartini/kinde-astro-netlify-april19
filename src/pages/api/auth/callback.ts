@@ -3,7 +3,9 @@ import kindeClient from "../../../lib/kinde";
 import { sessionManager } from "../../../lib/sessionManager";
 
 export const GET: APIRoute = async ({ request, cookies, redirect }) => {
-  await kindeClient.handleRedirectToApp(sessionManager(cookies), new URL(request.url));
+  const x = await kindeClient.handleRedirectToApp(sessionManager(cookies), new URL(request.url));
+
+  console.log(x);
 
   return redirect("/dashboard", 302);
 };
