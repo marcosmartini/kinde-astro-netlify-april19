@@ -13,6 +13,7 @@ declare namespace App {
     idToken: string;
     accessToken: string;
     refreshToken: string;
+    netlify: any;
   }
 }
 
