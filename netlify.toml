@@ -1,0 +1,3 @@
+[build.environment]
+  TESTING = "HELLO"
+  SITESITE = process.env.DEPLOY_URL
