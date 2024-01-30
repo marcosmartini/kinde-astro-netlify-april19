@@ -10,5 +10,7 @@ export const onRequest = defineMiddleware(async ({ cookies, locals }, next) => {
   locals.accessToken = await session.getSessionItem("access_token");
   locals.refreshToken = await session.getSessionItem("refresh_token");
 
+  console.log(import.meta.env);
+
   return next();
 });
