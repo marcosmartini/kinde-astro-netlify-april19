@@ -12,6 +12,7 @@ export const onRequest = defineMiddleware(async ({ cookies, locals }, next) => {
 
   console.log(import.meta.env);
   console.log(locals.netlify.context);
+  console.log("oi");
 
   return next();
 });
