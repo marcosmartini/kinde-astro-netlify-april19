@@ -5,5 +5,6 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Home page">
   <main>
     <h1>This is the home page.</h1>
+    <div>{Astro.locals.netlify.context.site}</div>
   </main>
 </Layout>
