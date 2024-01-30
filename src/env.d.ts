@@ -1,7 +1,10 @@
+/// <reference path="../.astro/types.d.ts" />
 /// <reference types="astro/client" />
 
+type NetlifyLocals = import("@astrojs/netlify").NetlifyLocals;
+
 declare namespace App {
-  interface Locals {
+  interface Locals extends NetlifyLocals {
     user: {
       family_name: string;
       given_name: string;
@@ -13,7 +16,6 @@ declare namespace App {
     idToken: string;
     accessToken: string;
     refreshToken: string;
-    netlify: any;
   }
 }
 

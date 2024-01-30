@@ -10,7 +10,7 @@ export const onRequest = defineMiddleware(async ({ cookies, locals }, next) => {
   locals.accessToken = (await session.getSessionItem("access_token")) as any;
   locals.refreshToken = (await session.getSessionItem("refresh_token")) as any;
 
-  console.log("NETLIFY CONTEXT: ", locals.netlify.context);
+  console.log("NETLIFY CONTEXT: ", ...[locals.netlify.context]);
   console.log("KINDE USER: ", locals.user);
 
   return next();
