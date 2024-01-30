@@ -10,7 +10,13 @@ export const onRequest = defineMiddleware(async ({ cookies, locals }, next) => {
   locals.accessToken = (await session.getSessionItem("access_token")) as any;
   locals.refreshToken = (await session.getSessionItem("refresh_token")) as any;
 
-  console.log(locals);
+  if (locals.netlify) {
+    console.log("SITE: ", locals.netlify.context.site);
+    console.log("GEO", locals.netlify.context.geo);
+    console.log("MODE: ", import.meta.env.MODE);
+    console.log("SITE: ", import.meta.env.SITE);
+    console.log("ALL: ", import.meta.env);
+  }
 
   return next();
 });
