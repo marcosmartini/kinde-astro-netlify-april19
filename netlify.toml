@@ -1,3 +1,5 @@
-[build.environment]
-  TESTING = "HELLO"
-  SITESITE = "process.env.DEPLOY_URL"
+[context.deploy-preview]
+  command = "export KINDE_SITE_URL=$DEPLOY_URL
+KINDE_POST_LOGOUT_REDIRECT_URL=$DEPLOY_URL
+KINDE_POST_LOGIN_REDIRECT_URL=$DEPLOY_URL
+KINDE_REDIRECT_URL=$DEPLOY_URL/api/auth/callback && npm run build"
