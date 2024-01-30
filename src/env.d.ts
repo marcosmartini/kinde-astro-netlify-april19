@@ -3,19 +3,21 @@
 
 type NetlifyLocals = import("@astrojs/netlify").NetlifyLocals;
 
+type KindeUser = {
+  family_name: unknown;
+  given_name: unknown;
+  picture: unknown;
+  email: unknown;
+  id: unknown;
+};
+
 declare namespace App {
   interface Locals extends NetlifyLocals {
-    user: {
-      family_name: string;
-      given_name: string;
-      picture: string;
-      email: string;
-      id: string;
-    };
-    acStateKey: string;
-    idToken: string;
-    accessToken: string;
-    refreshToken: string;
+    user: KindeUser;
+    acStateKey: unknown;
+    idToken: unknown;
+    accessToken: unknown;
+    refreshToken: unknown;
   }
 }
 
