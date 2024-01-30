@@ -23,6 +23,7 @@ interface ImportMetaEnv {
   readonly KINDE_SITE_URL: string;
   readonly KINDE_POST_LOGOUT_REDIRECT_URL: string;
   readonly KINDE_POST_LOGIN_REDIRECT_URL: string;
+  readonly KINDE_REDIRECT_URL: string;
 }
 
 interface ImportMeta {
