@@ -4,11 +4,11 @@
 type NetlifyLocals = import("@astrojs/netlify").NetlifyLocals;
 
 type KindeUser = {
-  family_name: unknown;
-  given_name: unknown;
-  picture: unknown;
-  email: unknown;
-  id: unknown;
+  family_name: string;
+  given_name: string;
+  picture: string;
+  email: string;
+  id: string;
 };
 
 declare namespace App {
