@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+if (!Astro.locals.user) {
+  return Astro.redirect("/");
+}
+---
+
+<Layout title="Dashboard">
+  <main>
+    <h1>Welcome, {Astro.locals.user.given_name}!</h1>
+  </main>
+</Layout>

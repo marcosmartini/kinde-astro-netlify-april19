@@ -1,0 +1,20 @@
+{
+  "name": "kinde-astro",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.4.1",
+    "@astrojs/netlify": "^5.0.0",
+    "@astrojs/node": "^8.1.0",
+    "@kinde-oss/kinde-typescript-sdk": "^2.6.2",
+    "astro": "^4.2.6",
+    "typescript": "^5.3.3"
+  }
+}

@@ -1,0 +1,81 @@
+<header>
+  <a href="/">LOGO</a>
+  <ul>
+    {
+      !Astro.locals.user && (
+        <>
+          <li>
+            <a href="/api/auth/login">Login</a>
+          </li>
+          <li>
+            <a href="/api/auth/register">Register</a>
+          </li>
+        </>
+      )
+    }
+    {
+      Astro.locals.user && (
+        <li>
+          <a href="/api/auth/logout">Logout</a>
+          {Astro.locals.user.picture ? (
+            <img
+              referrerpolicy="no-referrer"
+              src={Astro.locals.user.picture}
+              width="32"
+              height="32"
+              alt=""
+            />
+          ) : (
+            <div class="user-initials">
+              {`${Astro.locals.user.given_name[0]}${Astro.locals.user.family_name[0]}`}
+            </div>
+          )}
+        </li>
+      )
+    }
+  </ul>
+</header>
+
+<style>
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    border-block-end: 1px solid #eee;
+    height: 4.5rem;
+  }
+
+  ul {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    list-style: none;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  img {
+    border-radius: 1rem;
+  }
+
+  .user-initials {
+    background-color: orangered;
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 0.75rem;
+    border-radius: 1rem;
+  }
+</style>
