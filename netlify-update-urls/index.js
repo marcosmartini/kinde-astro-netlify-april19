@@ -2,7 +2,7 @@
 
 import { promisify } from "util";
 
-const updateVars = async () => {
+const updateVars = async (netlifyConfig) => {
   netlifyConfig.build.environment.KINDE_CLIENT_ID = "e6f800baf7b94b79b8301d87521d4c94";
   netlifyConfig.build.environment.KINDE_CLIENT_SECRET =
     "JZAb2v2FstmaFLpSiM0DkesOdnRbUDY3qL7dXSqR5ymLaB3xiTm";
@@ -14,7 +14,7 @@ const updateVars = async () => {
 
 export const onBuild = async function ({ netlifyConfig }) {
   if (netlifyConfig.build.environment.CONTEXT == "production") {
-    const response = await promisify(updateVars)();
+    const response = await promisify(updateVars)(netlifyConfig);
 
     console.log(response);
   }
