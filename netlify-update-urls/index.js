@@ -1,6 +1,6 @@
 // index.js
 
-export const onPreBuild = function ({ netlifyConfig }) {
+export const onBuild = function ({ netlifyConfig }) {
   if (netlifyConfig.build.environment.CONTEXT == "production") {
     netlifyConfig.build.environment.KINDE_CLIENT_ID = "e6f800baf7b94b79b8301d87521d4c94";
     netlifyConfig.build.environment.KINDE_CLIENT_SECRET =
