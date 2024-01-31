@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[template.environment]
+  KINDE_ISSUER_URL = "Your kinde domain (e.g. https://foo.kinde.com)"
+  KINDE_CLIENT_ID = "Your app’s Client ID"
+  KINDE_CLIENT_SECRET = "Your app’s Client secret"
+  
