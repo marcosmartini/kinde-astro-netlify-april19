@@ -1,5 +1,5 @@
 import type { APIRoute } from "astro";
-import kindeClient from "../../../lib/kinde";
+import { kindeClient } from "../../../../astro.config.mjs";
 import { sessionManager } from "../../../lib/sessionManager";
 
 export const GET: APIRoute = async ({ request, cookies, redirect }) => {
