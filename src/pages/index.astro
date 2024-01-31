@@ -1,9 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const t = import.meta.env;
 ---
 
 <Layout title="Home page">
   <main>
     <h1>This is the home page!</h1>
+    <pre>
+{JSON.stringify(t, null, 2)}
+    </pre>
   </main>
 </Layout>
