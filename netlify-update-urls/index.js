@@ -8,5 +8,7 @@ export const onPreBuild = async function ({
   utils: { build, status, cache, run, git },
   netlifyConfig,
 }) {
-  await run.command(`KINDE_REDIRECT_URL=${netlifyConfig.build.environment.URL}/api/auth/callback`);
+  await run.command(
+    `KINDE_REDIRECT_URL=${netlifyConfig.build.environment.URL}/api/auth/callback && npm run build`
+  );
 };
