@@ -1,2 +1,2 @@
 [context.deploy-preview]
-  command="export KINDE_SITE_URL=$DEPLOY_URL KINDE_REDIRECT_URL=$DEPLOY_URL/api/auth/callback && astro build"
+  command="astro build --mode pre"
