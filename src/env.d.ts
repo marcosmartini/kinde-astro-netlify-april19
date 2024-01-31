@@ -25,9 +25,7 @@ interface ImportMetaEnv {
   readonly KINDE_CLIENT_ID: string;
   readonly KINDE_CLIENT_SECRET: string;
   readonly KINDE_ISSUER_URL: string;
-  readonly KINDE_SITE_URL: string;
   readonly KINDE_POST_LOGOUT_REDIRECT_URL: string;
-  readonly KINDE_POST_LOGIN_REDIRECT_URL: string;
   readonly KINDE_REDIRECT_URL: string;
 }
 
