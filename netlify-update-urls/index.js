@@ -1,9 +1,14 @@
 // index.js
 
-export const onBuild = async function ({ netlifyConfig }) {
-  if (netlifyConfig.build.environment.CONTEXT == "production") {
-    netlifyConfig.build.environment.KINDE_REDIRECT_URL = `${netlifyConfig.build.environment.URL}/api/auth/callback`;
-    netlifyConfig.build.environment.KINDE_POST_LOGOUT_REDIRECT_URL =
-      netlifyConfig.build.environment.URL;
-  }
+// export const onPreBuild = function ({ netlifyConfig }) {
+//   netlifyConfig.build.command = `export KINDE_REDIRECT_URL=${netlifyConfig.build.environment.URL}/api/auth/callback`;
+// };
+
+export const onPreBuild = async function ({
+  utils: { build, status, cache, run, git },
+  netlifyConfig,
+}) {
+  await run.command(
+    `export KINDE_REDIRECT_URL=${netlifyConfig.build.environment.URL}/api/auth/callback`
+  );
 };
