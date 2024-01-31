@@ -1,2 +1,0 @@
-[context.deploy-preview]
-  command="astro build --mode pre"
