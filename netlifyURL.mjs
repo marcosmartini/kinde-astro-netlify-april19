@@ -8,4 +8,6 @@ if (process.env.NETLIFY) {
   } 
 }
 
+console.log("NETLIFY URL: ", netlifyURL)
+
 export { netlifyURL };
