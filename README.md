@@ -1,7 +1,5 @@
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/marcosmartini/kinde-astro-netlify#KINDE_REDIRECT_URL=/api/auth/callback&KINDE_POST_LOGOUT_REDIRECT_URL=)
 
-https://app.netlify.com/start/deploy?repository=https://github.com/myworkspace/sweetkittentemplate#SECRET_TOKEN=specialuniquevalue&CUSTOM_LOGO=https://placekitten.com/100/100
-
 # Astro Starter Kit: Basics
 
 ```sh
